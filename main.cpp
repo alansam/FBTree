@@ -1,3 +1,8 @@
+/*
+ * What if i don't want to make a global variable of
+ * root so is there any other way  to display the
+ * tree by using the same approach
+ */
 
 #include <iostream>
 
@@ -9,7 +14,7 @@ struct tnode {
 };
 
 template <typename T>
-void insertion(tnode<T> * /*&*/ptr, const T val) {
+void insertion(tnode<T> * &ptr, const T val) {
   std::clog << "In function " << __func__ << "()\n"
             << "  arg 1: " << ptr << '\n'
             << "  arg 2: " << val << '\n';
